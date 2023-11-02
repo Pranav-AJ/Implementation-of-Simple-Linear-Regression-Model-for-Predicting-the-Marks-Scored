@@ -36,9 +36,10 @@ df
 df.head()
 
 df.tail()
-
+# Array value of X
 X=df.iloc[:,:-1].values
 print(X)
+# Array value of Y
 Y=df.iloc[:,-1].values
 print(Y)
 
@@ -53,22 +54,25 @@ from sklearn.linear_model import LinearRegression
 reg=LinearRegression()
 reg.fit(X_train,Y_train)
 Y_pred=reg.predict(X_test)
+# Values of Y prediction 
 print(Y_pred)
+# Array value of Y test
 print(Y_test)
-
+# Training set graph
 plt.scatter(X_train,Y_train,color='green')
 plt.plot(X_train,reg.predict(X_train),color='red')
 plt.title('Training set(H vs S)')
 plt.xlabel('Hours')
 plt.ylabel('Scores')
 plt.show()
+# Test set graph
 plt.scatter(X_test,Y_test,color='blue')
 plt.plot(X_test,reg.predict(X_test),color='silver')
 plt.title("Test set(H vs S)")
 plt.xlabel('Hours')
 plt.ylabel('Scores')
 plt.show()
-
+# Values of MSE,MAE and RMSE
 mse=mean_squared_error(Y_test,Y_pred)
 print('MSE = ',mse)
 mae=mean_absolute_error(Y_test,Y_pred)
