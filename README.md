@@ -1,4 +1,4 @@
-# Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored
+  # Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored
 
 ## AIM:
 To write a program to predict the marks scored by a student using the simple linear regression model.
@@ -36,10 +36,10 @@ df
 df.head()
 
 df.tail()
-# Array value of X
+
 X=df.iloc[:,:-1].values
 print(X)
-# Array value of Y
+
 Y=df.iloc[:,-1].values
 print(Y)
 
@@ -54,25 +54,23 @@ from sklearn.linear_model import LinearRegression
 reg=LinearRegression()
 reg.fit(X_train,Y_train)
 Y_pred=reg.predict(X_test)
-# Values of Y prediction 
+
 print(Y_pred)
-# Array value of Y test
 print(Y_test)
-# Training set graph
 plt.scatter(X_train,Y_train,color='green')
 plt.plot(X_train,reg.predict(X_train),color='red')
 plt.title('Training set(H vs S)')
 plt.xlabel('Hours')
 plt.ylabel('Scores')
 plt.show()
-# Test set graph
+
 plt.scatter(X_test,Y_test,color='blue')
 plt.plot(X_test,reg.predict(X_test),color='silver')
 plt.title("Test set(H vs S)")
 plt.xlabel('Hours')
 plt.ylabel('Scores')
 plt.show()
-# Values of MSE,MAE and RMSE
+
 mse=mean_squared_error(Y_test,Y_pred)
 print('MSE = ',mse)
 mae=mean_absolute_error(Y_test,Y_pred)
@@ -97,15 +95,18 @@ print(Y_pred1)
 ### df.tail()
 
 ![image](https://github.com/Pranav-AJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118904526/fd2ab00c-4655-4a33-af6b-de7ea7299772)
-
+### Array value of X and Y
 ![image](https://github.com/Pranav-AJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118904526/2414450a-6635-4942-a929-e6122b504519)
-
+### Values of Y prediction and array value of Y test
 ![image](https://github.com/Pranav-AJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118904526/100a1852-71ce-4954-b6c5-341711537732)
-
+ 
+### Training set graph
 ![image](https://github.com/Pranav-AJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118904526/1fca3c7e-1481-43c0-99cc-8948af9b7a83)
 
+### Test set graph
 ![image](https://github.com/Pranav-AJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118904526/5d163a49-52c3-4733-a29d-d47bba73be78)
 
+### Values of MSE,MAE and RMSE
 ![image](https://github.com/Pranav-AJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118904526/e8150677-8181-4d38-a1da-9ed9964e368d)
 
 ![image](https://github.com/Pranav-AJ/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/118904526/49eb51c8-e1d8-4c4c-827c-300c3a2646ac)
